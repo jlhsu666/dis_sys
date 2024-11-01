@@ -24,10 +24,15 @@ const PostUser = () => {
             return alert(err);
         });
     };
-};
 
 const onChangeForm = (e) => {
-
+  if(e.target.name === 'name') {
+    setUser({...user, name:e.target.value});
+  } else if (e.target.name === 'age') {
+    setUser({...user, age:e.target.value});
+  } else if (e.target.name === 'email') {
+    setUser({...user, email:e.target.value});
+  }
 };
 
 return (
@@ -41,17 +46,17 @@ return (
             
             <div>
               <label>Name</label>
-              <input type="text" value={user.name} onChange={()=>onChangeForm()} name="name" id="name" placeholder="Name">
+              <input type="text" value={user.name} onChange={()=>onChangeForm()} name="name" id="name" placeholder="Name"/>
             </div>
             
             <div>
               <label>Age</label>
-              <input type="text" value={user.age} onChange={()=>onChangeForm()} name="age" id="age" placeholder="Age">
+              <input type="text" value={user.age} onChange={()=>onChangeForm()} name="age" id="age" placeholder="Age"/>
             </div>
      
             <div>
               <label>Email</label>
-              <input type="text" value={user.email} onChange={()=>onChangeForm()} name="email" id="email" placeholder="Email">
+              <input type="text" value={user.email} onChange={()=>onChangeForm()} name="email" id="email" placeholder="Email"/>
             </div>
          
           </div> 
@@ -63,5 +68,5 @@ return (
   </div>  
 
 );
-
+};
 export default PostUser;
