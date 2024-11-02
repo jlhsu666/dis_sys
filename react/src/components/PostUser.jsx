@@ -46,17 +46,17 @@ return (
             
             <div>
               <label>Name</label>
-              <input type="text" value={user.name} onChange={()=>onChangeForm()} name="name" id="name" placeholder="Name"/>
+              <input type="text" value={user.name} onChange={(e)=>onChangeForm(e)} name="name" id="name" placeholder="Name"/>
             </div>
             
             <div>
               <label>Age</label>
-              <input type="text" value={user.age} onChange={()=>onChangeForm()} name="age" id="age" placeholder="Age"/>
+              <input type="text" value={user.age} onChange={(e)=>onChangeForm(e)} name="age" id="age" placeholder="Age"/>
             </div>
      
             <div>
               <label>Email</label>
-              <input type="text" value={user.email} onChange={()=>onChangeForm()} name="email" id="email" placeholder="Email"/>
+              <input type="text" value={user.email} onChange={(e)=>onChangeForm(e)} name="email" id="email" placeholder="Email"/>
             </div>
          
           </div> 
