@@ -42,12 +42,12 @@ app.get('/api/all', async (req, res) => {
     }
 });
 
-app.get('/api/form', async (req, res) =>{
+app.post('/api/form', async (req, res) =>{
     try{
         const name = req.body.name;
         const email = req.body.email;
         const age = req.body.age;
-        const response = await client.query(`INSERT INTO users(name, email, age) VALUES('${name}','${email}','${age}')`);
+        const response = await client.query(`INSERT INTO users(name, email, age) VALUES('${name}','${email}',${age})`);
         if (response){
             res.status(200).send(req.body);
         }
