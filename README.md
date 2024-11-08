@@ -4,6 +4,11 @@
 npm run start
 
 # Git 
-git add .
-git commit -m "memo"
-git push origin main
+git add . <br>
+git commit -m "memo" <br>
+git push origin main <br>
+
+# Docker
+sudo gpasswd -a $(whoami) docker<br>
+sudo systemctl restart docker<br>
+newgrp - docker<br>
